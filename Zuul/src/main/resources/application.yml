@@ -1,0 +1,21 @@
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: micro-zuul
+
+zuul:
+  ignored-services: '*'    #  '*' 表示忽略所有
+  routes:
+    bank: # 方案2， aaa表示路由名称，可以随便写，没有特殊意义
+      service-id: micro-bank   # 路由原地址
+      path: /bank/**    # 路由后访问地址
+    user:
+      service-id: micro-user
+      path: /user/**

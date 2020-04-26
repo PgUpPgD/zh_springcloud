@@ -1,0 +1,36 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    name: micro-bank
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 #采用比例，默认0.1，全部采样1.0
+  zipkin:
+      base-url: http://149.129.67.83:9411/ #指定zipkin的服务器地址
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://149.129.67.83:3306/stu?serverTimezone=Asia/Shanghai&useAffectedRows=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      max-active: 20
+      initial-size: 5
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+
+mybatis:
+  type-aliases-package: com.zh.micro_bank1.entity
+  mapper-locations: classpath:mapper/*.xml
+
+pagehelper:
+  helperDialect: mysql

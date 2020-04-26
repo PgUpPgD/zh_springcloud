@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+index
+
+<button onclick="balance()">发起请求</button>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+<script type="text/javascript">
+    // 为所有的ajax请求都会加上这个请求头
+    $(document).ajaxSend(function (event, xhr) {
+        xhr.setRequestHeader("token", window.localStorage.getItem("token")) ;
+    });
+
+    function balance() {
+        $.ajax({
+            type:"get",
+            url:"http://localhost:9001/bank/user/transfer.do?name=小牛&uid=3&subtract=500&tid=1",
+            success:function (data) {
+                if (data.code == 0){
+                    alert(data.msg);
+                } else {
+                    alert(data.code);
+                    window.location.href = "login.html";
+                }
+            }
+        })
+    }
+
+
+</script>
+
+</body>
+</html>

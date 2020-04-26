@@ -1,0 +1,59 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: micro-weixin
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://149.129.67.83:3306/stu?serverTimezone=Asia/Shanghai&useAffectedRows=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      max-active: 20
+      initial-size: 5
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+mybatis:
+  type-aliases-package: com.zh.micro_weixin.entity
+  mapper-locations: classpath:mapper/*.xml
+
+#通用的
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 500000
+  hystrix:
+    enabled: true  # 启用hystrix
+    command:
+      default: #针对所有
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 1000
+
+#针对具体的
+micro-bank:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule #配置规则 最空闲连接策略
+    ConnectTimeout: 500 #请求连接超时时间
+    ReadTimeout: 1000 #请求处理的超时时间
+    OkToRetryOnAllOperations: true #对所有请求都进行重试
+    MaxAutoRetriesNextServer: 2 #切换实例的重试次数
+    MaxAutoRetries: 1 #对当前实例的重试次数
+
+#lcn配置
+#tx-lcn:
+#  client:
+#    manager-address: 127.0.0.1:8070
+#  springcloud:
+#    loadbalance:
+#      enabled: true
+

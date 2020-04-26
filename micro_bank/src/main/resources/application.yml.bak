@@ -1,0 +1,37 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: micro-bank
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://149.129.67.83:3306/stu?serverTimezone=Asia/Shanghai&useAffectedRows=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      max-active: 20
+      initial-size: 5
+
+eureka:
+  client:
+    service-url:
+#      多台注册中心
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+
+mybatis:
+  type-aliases-package: com.zh.micro_bank.entity
+  mapper-locations: classpath:mapper/*.xml
+
+pagehelper:
+  helperDialect: mysql
+
+#lcn配置
+#tx-lcn:
+#  client:
+##    端口在tx管理系统中可修改
+#    manager-address: 127.0.0.1:8070
+#  springcloud:
+#    loadbalance:
+#      enabled: true

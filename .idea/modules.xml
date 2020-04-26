@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Eureka/Eureka.iml" filepath="$PROJECT_DIR$/Eureka/Eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureke/Eureke.iml" filepath="$PROJECT_DIR$/Eureke/Eureke.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zuul/Zuul.iml" filepath="$PROJECT_DIR$/Zuul/Zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_bank/micro_bank.iml" filepath="$PROJECT_DIR$/micro_bank/micro_bank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_bank1/micro_bank1.iml" filepath="$PROJECT_DIR$/micro_bank1/micro_bank1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_config/micro_config.iml" filepath="$PROJECT_DIR$/micro_config/micro_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_tm/micro_tm.iml" filepath="$PROJECT_DIR$/micro_tm/micro_tm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_user/micro_user.iml" filepath="$PROJECT_DIR$/micro_user/micro_user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_web/micro_web.iml" filepath="$PROJECT_DIR$/micro_web/micro_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_weixin/micro_weixin.iml" filepath="$PROJECT_DIR$/micro_weixin/micro_weixin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_zhifubao/micro_zhifubao.iml" filepath="$PROJECT_DIR$/micro_zhifubao/micro_zhifubao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_zipkin/micro_zipkin.iml" filepath="$PROJECT_DIR$/micro_zipkin/micro_zipkin.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/Eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureke" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_bank" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_bank1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_tm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_weixin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_zhifubao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_zipkin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro_zipkin/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

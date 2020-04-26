@@ -1,0 +1,24 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: micro-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: false
+    #是否抓取注册信息
+    fetch-registry: false
+#  server:
+#    # 清理间隔
+#    eviction-interval-timer-in-ms: 5000
+#    # 是否开启eureka服务器的自我保护
+#    enable-self-preservation: true
+#  instance:
+#    #每30S给其他服务发次请求，监测心跳
+#    lease-renewal-interval-in-seconds: 30
+#    #如果其他服务没心跳，90S后剔除该服务
+#    lease-expiration-duration-in-seconds: 90
